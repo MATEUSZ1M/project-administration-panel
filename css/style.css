@@ -15,10 +15,6 @@
   width: 100%;
 }
 
-.row > * {
-  padding: 8px;
-}
-
 .col-1 {
   width: 8.333%;
 }
@@ -75,8 +71,37 @@
   background-color: #ffffff;
 }
 
+.content-container {
+  margin-left: 16.667%;
+}
+
 body {
-  background-color: #f5f5f2;
+  background-color: #f3f3f1;
+}
+
+header {
+  background: #ffffff;
+  height: 7vh;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.section {
+  background: #ffffff;
+  width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sub-section {
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.sub-section-container {
+  width: 60%;
+  margin: 0 auto;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -424,27 +449,32 @@ template {
   height: 40px;
 }
 
+.hamburger {
+  display: none;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
 
-.page-header {
+.lage-header {
   font-size: 24px;
   color: #979797;
   text-transform: uppercase;
 }
 
-.section-header {
-  font-size: 18px;
+.medium-header {
+  font-size: 16px;
   color: #979797;
   font-weight: 700;
   line-height: 42px;
 }
 
-.section-sub-header {
+.small-header {
   text-transform: uppercase;
   color: #979797;
   font-size: 14px;
+  padding: 1.5em;
 }
 
 .p {
@@ -453,11 +483,15 @@ body {
   font-weight: 300;
 }
 
+i {
+  padding: 1em;
+}
+
 .btn {
   margin: 10px;
   padding: 10px 25px;
   border-radius: 5px 5px 5px 5px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   border: none;
   color: #ffffff;
@@ -500,7 +534,7 @@ body {
 }
 
 .link-lg {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .checkbox {
@@ -527,7 +561,7 @@ body {
     height: 21px;
     outline: none;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: bottom;
     position: relative;
     margin: 0;
     cursor: pointer;
@@ -596,9 +630,6 @@ body {
     cursor: pointer;
     margin-left: 4px;
   }
-  input[type='checkbox']:not(.switch) {
-    border-radius: 7px;
-  }
   input[type='checkbox']:not(.switch):after {
     width: 5px;
     height: 9px;
@@ -632,5 +663,57 @@ body {
   input[type='checkbox'].switch:disabled:not(:checked):after {
     opacity: .6;
   }
+}
+
+.logo {
+  -ms-flex: 3;
+      flex: 3;
+  height: 7vh;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.logo a {
+  padding: 1em;
+}
+
+.hambuger {
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.aside {
+  background-color: #191919;
+  height: 100vh;
+  position: fixed;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  font-size: 16px;
+  color: #f3f3f1;
+  padding: 1em 0 1em 1em;
+  list-style: none;
+  cursor: pointer;
+  border-left: 10px solid transparent;
+}
+
+.navigation li:hover {
+  background-color: #282828;
+  border-left: 10px solid #f58220;
+}
+
+.header-item {
+  border-left: solid 1px;
+  padding: 5px 1em;
+  color: #979797;
+}
+
+.header-item .wallet {
+  font-size: 24px;
 }
 /*# sourceMappingURL=style.css.map */

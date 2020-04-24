@@ -3,24 +3,25 @@ body{
     font-family: $font-family-main;
 }
 //page headerh1
-.page-header {
+.lage-header {
   font-size: $xlg-font-size;
   color: $color-medium;
   text-transform: uppercase;
 }
 
 //section header h2
-.section-header {
+.medium-header {
   font-size: $med-font-size;
   color: $color-medium;
   font-weight: 700;
   line-height: 42px;
 }
 
-.section-sub-header{
+.small-header{
     text-transform: uppercase;
     color: $color-medium;
     font-size: $sm-font-size;
+    padding: 1.5em;
 }
 
 // .h4{
@@ -44,6 +45,11 @@ body{
   color: $color-dark;
   font-weight: 300;
 }
+
+i {
+  padding: 1em;
+}
+
 
 //buttons
 
@@ -124,7 +130,7 @@ body{
       height: 21px;
       outline: none;
       display: inline-block;
-      vertical-align: top;
+      vertical-align: bottom;
       position: relative;
       margin: 0;
       cursor: pointer;
@@ -188,7 +194,7 @@ body{
     }
     input[type='checkbox'] {
       &:not(.switch) {
-        border-radius: 7px;
+        
         &:after {
           width: 5px;
           height: 9px;
@@ -229,3 +235,59 @@ body{
       }
     }
 }
+
+//logo
+
+.logo{
+  flex: 3;
+  height: 7vh;
+  justify-content: space-between;
+
+  a{
+    padding: 1em;
+  }
+}
+
+.hambuger{
+  flex: 1;
+}
+
+.aside{
+  background-color: $color-aside;
+  height: 100vh;
+  position: fixed;
+}
+
+
+//aside navigation{
+  .navigation {
+    margin: 0;
+    padding: 0;
+
+    li{
+    font-size: $med-font-size;
+    color: $color-incoming;
+    padding: 1em 0 1em 1em;
+    list-style: none;
+    cursor: pointer;
+    border-left: 10px solid transparent;
+
+    &:hover{
+     background-color: $color-aside-selected;
+      border-left: 10px solid $color-danger;
+    }
+    }
+  }
+  
+  //header 
+
+  .header-item{
+    border-left: solid 1px;
+    padding: 5px 1em;
+    color: $color-medium;
+overflow-y: ;
+
+    .wallet {
+      font-size: $xlg-font-size;
+    }
+  }

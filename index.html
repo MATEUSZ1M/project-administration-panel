@@ -1,20 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administration panel</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <a href="styleguide.html">styleguide</a>
+    <link rel="stylesheet" href="/vendor/icon-font/css/Glyphter.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!--ASIDE-->
+    <aside class="col-2 aside">
+      <div class="logo row">
+        <a href="#"><img src="/images/logo.png" alt="logo" /></a>
+        <a id="hamburger" href="#"
+          ><img src="/images/hamburger.png" alt=""
+        /></a>
+      </div>
 
-    <div class="row">
-        <div class="col-2">d</div>
-        <div class="col-10">d</div>
+      <div id="navigation">
+        <ul class="navigation">
+          <li><i class="icon-general"></i> General</li>
+          <li><i class="icon-details"></i>Details</li>
+          <li><i class="icon-links"></i>Links</li>
+          <li><i class="icon-banners"></i>Banners</li>
+          <li><i class="icon-personaldata"></i> Personal data</li>
+          <li><i class="icon-payout"></i>Payout</li>
+          <li><i class="icon-postback"></i>ostback</li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content-container">
+      <!--HEADER-->
+      <header class="row">
+        <div class="header-item">
+          <span class="wallet">
+            <i class="icon-wallet "></i>$1500.00<i
+              class="icon-arrow-down-small"
+            ></i>
+          </span>
+        </div>
+        <div class="header-item">
+          <span>
+            <i class="icon-notification"></i>
+          </span>
+        </div>
+        <div class="header-item"> 
+          <span>  <a  class="link link-lg" href="#"><i class="icon-profile"></i>Leonardo DiCapirop</a></span>
+        </div>
+        <div class="header-item">
+          <i class="icon-login"></i>
+        </div>
+      </header>
     </div>
 
-    <button class="btn">Button</button>
+    <div class="content-container">
+      <!--MAIN-->
+      <main>
+        <section class="section section-general-statisctic">
+          <h2 class="medium-header">General statistic</h2>
+          <div class="sub-section">
+            <div class="sub-section-container">
+              <a href="/styleguide.html">guide</a>
+            </div>
+          </div>
 
-</body>
+          <div class="sub-section">
+            <div class="sub-section-container">
+              S
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
 </html>
