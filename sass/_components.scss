@@ -1,27 +1,29 @@
 //typography
-body{
-    font-family: $font-family-main;
+body {
+  font-family: $font-family-main;
+}
+
+.lage-header,
+.medium-header {
+  color: $color-medium;
+  padding: 1.2em;
+  text-transform: uppercase;
 }
 //page headerh1
 .lage-header {
   font-size: $xlg-font-size;
-  color: $color-medium;
-  text-transform: uppercase;
 }
 
 //section header h2
 .medium-header {
   font-size: $med-font-size;
-  color: $color-medium;
   font-weight: 700;
-  line-height: 42px;
 }
 
-.small-header{
-    text-transform: uppercase;
-    color: $color-medium;
-    font-size: $sm-font-size;
-    padding: 1.5em;
+.small-header {
+  font-size: $sm-font-size;
+  color: $color-medium;
+  padding: 1.2em;
 }
 
 // .h4{
@@ -50,17 +52,24 @@ i {
   padding: 1em;
 }
 
-
 //buttons
 
+
+
 .btn {
-  margin: $margin-lg;
-  padding: 10px 25px;
+  padding: 0.5em 1em;
   border-radius: 5px 5px 5px 5px;
-  font-size: $lg-font-size;
+  font-size: 1em;
   cursor: pointer;
   border: none;
   color: $color-light;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.btn-small{
+  padding: 1em;
 }
 
 .btn-normal {
@@ -87,7 +96,7 @@ i {
 
 //links
 
-.link {
+a {
   text-decoration: none;
   cursor: pointer;
   color: $color-link;
@@ -98,196 +107,344 @@ i {
 }
 
 .link-sm {
-  font-size: $sm-font-size;
+  font-size: $xs-font-size;
 }
 
 .link-lg {
   font-size: $lg-font-size;
 }
 
-//checkboxes
-.checkbox{
-    font-size: $sm-font-size;
-    padding: 10px 50px 10px 5px;
+//table
+table {
+  border-collapse: collapse;
+  margin: 1em;
+
+  tr {
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
 
     &:hover {
-        background: $color-medium-hover;
+      background: $color-medium-hover;
     }
-}
 
-@supports(-webkit-appearance: none) or (-moz-appearance: none) {
-    input[type='checkbox'],
-    input[type='radio'] {
-      --active: #04ae00;
-      --active-inner: #fff;
-      --border: #BBC1E1;
-      --border-hover: #74b67a;
-      --background: #fff;
-      --disabled: #F6F8FF;
-      --disabled-inner: #E1E6F9;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      height: 21px;
-      outline: none;
-      display: inline-block;
-      vertical-align: bottom;
-      position: relative;
-      margin: 0;
-      cursor: pointer;
-      border: 1px solid var(--bc, var(--border));
-      background: var(--b, var(--background));
-      transition: background .3s, border-color .3s, box-shadow .2s;
-      &:after {
-        content: '';
-        display: block;
-        left: 0;
-        top: 0;
-        position: absolute;
-        transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
-      }
-      &:checked {
-        --b: var(--active);
-        --bc: var(--active);
-        --d-o: .3s;
-        --d-t: .6s;
-        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
-      }
-      &:disabled {
-        --b: var(--disabled);
-        cursor: not-allowed;
-        opacity: .9;
-        &:checked {
-          --b: var(--disabled-inner);
-          --bc: var(--border);
-        }
-        & + label {
-          cursor: not-allowed;
-        }
-      }
-      &:hover {
-        &:not(:checked) {
-          &:not(:disabled) {
-            --bc: var(--border-hover);
-          }
-        }
-      }
-      &:focus {
-        box-shadow: 0 0 0 var(--focus);
-      }
-      &:not(.switch) {
-        width: 21px;
-        &:after {
-          opacity: var(--o, 0);
-        }
-        &:checked {
-          --o: 1;
-        }
-      }
-      & + label {
-        font-size: 14px;
-        line-height: 21px;
-        display: inline-block;
-        vertical-align: top;
-        cursor: pointer;
-        margin-left: 4px;
-      }
+    &:last-child {
+      border-bottom: solid 1px rgba(0, 0, 0, 0.1);
     }
-    input[type='checkbox'] {
-      &:not(.switch) {
-        
-        &:after {
-          width: 5px;
-          height: 9px;
-          border: 2px solid var(--active-inner);
-          border-top: 0;
-          border-left: 0;
-          left: 7px;
-          top: 4px;
-          transform: rotate(var(--r, 20deg));
-        }
-        &:checked {
-          --r: 43deg;
-        }
-      }
-      &.switch {
-        width: 38px;
-        border-radius: 11px;
-        &:after {
-          left: 2px;
-          top: 2px;
-          border-radius: 50%;
-          width: 15px;
-          height: 15px;
-          background: var(--ab, var(--border));
-          transform: translateX(var(--x, 0));
-        }
-        &:checked {
-          --ab: var(--active-inner);
-          --x: 17px;
-        }
-        &:disabled {
-          &:not(:checked) {
-            &:after {
-              opacity: .6;
-            }
-          }
-        }
-      }
-    }
-}
-
-//logo
-
-.logo{
-  flex: 3;
-  height: 7vh;
-  justify-content: space-between;
-
-  a{
-    padding: 1em;
   }
 }
 
-.hambuger{
-  flex: 1;
+.scroll-wrapper {
+  display: block;
+  width: 100%;
 }
 
-.aside{
-  background-color: $color-aside;
-  height: 100vh;
-  position: fixed;
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
 }
 
+.table-statistic {
+  margin-top: 2em;
 
-//aside navigation{
-  .navigation {
+  td {
+    padding: 0.9em;
+  }
+}
+
+//inputs
+
+.input-wrapper {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  .input {
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    margin: 0.5em;
+    display: flex;
+
+  }
+
+  input {
+    border: hidden;
+    font-size: $sm-font-size;
+    padding: 0.5em;
+    height: 100%;
+    width: 100%;
+
+    &:first-of-type{
+      border-right: solid 1px;
+    }
+  }
+
+  input[type="text"]:active {
+    border-color: none;
+  }
+
+  button {
     margin: 0;
-    padding: 0;
+  }
+}
 
-    li{
+//checkboxes
+.checkbox {
+  font-size: $sm-font-size;
+  padding: 10px 50px 10px 5px;
+
+  &:hover {
+    background: $color-medium-hover;
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    --active: #04ae00;
+    --active-inner: #fff;
+    --border: #bbc1e1;
+    --border-hover: #74b67a;
+    --background: #fff;
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    &:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+        opacity var(--d-o, 0.2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: 0.3s;
+      --d-t: 0.6s;
+      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+  input[type="checkbox"] {
+    &:not(.switch) {
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+//logo
+.logo {
+  background-color: $color-aside;
+  width: 100%;
+}
+
+.logo-item {
+  height: 7vh;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto;
+
+  &:nth-of-type(1) {
+    margin: 0 30px;
+
+  }
+
+  &:nth-of-type(2) {
+    margin-left: auto;
+  }
+
+  i {
+    color: $color-light;
+    font-size: $xlg-font-size;
+  }
+}
+
+.hamb {
+  margin-right: auto;
+}
+
+
+//aside navigation
+.navigation {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  li {
     font-size: $med-font-size;
     color: $color-incoming;
     padding: 1em 0 1em 1em;
     list-style: none;
     cursor: pointer;
-    border-left: 10px solid transparent;
+    border-left: 5px solid transparent;
 
-    &:hover{
-     background-color: $color-aside-selected;
-      border-left: 10px solid $color-danger;
-    }
-    }
-  }
-  
-  //header 
-
-  .header-item{
-    border-left: solid 1px;
-    padding: 5px 1em;
-    color: $color-medium;
-overflow-y: ;
-
-    .wallet {
-      font-size: $xlg-font-size;
+    &:hover {
+      background-color: $color-aside-selected;
+      border-left: 5px solid $color-danger;
     }
   }
+}
+
+//header
+
+.header-item {
+  border-left: solid 1px rgba(192, 192, 192, 0.1);
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  padding: 0 1.2em;
+  color: $color-medium;
+  font-size: 0.9em;
+
+  &:hover {
+    background: $color-medium-hover;
+    cursor: pointer;
+  }
+}
+
+.light-list {
+  height: 0;
+  background: $color-ofline;
+  transition: 0.3s;
+
+  ul,
+  li,
+  div {
+    display: none;
+  }
+
+  li {
+    color: $color-dark;
+
+    &:hover {
+      background-color: $color-danger-hover;
+    }
+  }
+}
+
+.active-dropdown {
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+
+  ul,
+  li,
+  div {
+    display: block;
+  }
+}
+
+
+
+//manager-nav
+.manager-nav {
+  border-top: solid 1px rgba(192, 192, 192, 0.1);
+
+  .navigation {
+    border-top: hidden;
+    border-bottom: hidden;
+
+    .manager-item {
+      display: flex;
+      align-items: center;
+
+      .link {
+        padding: 1em;
+      }
+    }
+  }
+}
+
+.graph {
+  padding: 2em 0;
+  text-align: left;
+
+  img {
+    width: 100%;
+  }
+}

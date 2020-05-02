@@ -1,9 +1,25 @@
-.col-4 .row .col-4 {
-    border: 2px solid white;
-    font-size: $xs-font-size;
-    height: 40px;
+.sidenav {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.4s;
+  width: 0;
+  opacity: 0;
+  display: flex;
 }
 
-.hamburger{
-    display: none;
+.visible {
+  opacity: 1;
+  width: 235px;
 }
+
+.container-active {
+  transition:  0.3s;
+  padding-left: 235px;
+}
+
+
+

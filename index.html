@@ -1,79 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administration panel</title>
-    <link rel="stylesheet" href="/vendor/icon-font/css/Glyphter.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <!--ASIDE-->
-    <aside class="col-2 aside">
-      <div class="logo row">
-        <a href="#"><img src="/images/logo.png" alt="logo" /></a>
-        <a id="hamburger" href="#"
-          ><img src="/images/hamburger.png" alt=""
-        /></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administration panel</title>
+  <link rel="stylesheet" href="/vendor/icon-font/css/Glyphter.css" />
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+<!-------------------ASIDE------------------------->
+  <aside class="sidenav">
+    <div id="navigation" class="logo">
+      <div class="row">
+        <div class="logo-item">
+          <img src="./images/logo.png">
+        </div>
+
+        <div id="close" class="logo-item">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
 
-      <div id="navigation">
+      <ul class="navigation">
+        <li><i class="icon-general"></i>General</li>
+        <li><i class="icon-details"></i>Details</li>
+        <li><i class="icon-links"></i>Links</li>
+        <li><i class="icon-banners"></i>Banners</li>
+        <li><i class="icon-personaldata"></i> Personal data</li>
+        <li><i class="icon-payout"></i>Payout</li>
+        <li><i class="icon-postback"></i>ostback</li>
+      </ul>
+
+      <div class="manager-nav">
+        <h3 class="medium-header">Your manager</h3>
         <ul class="navigation">
-          <li><i class="icon-general"></i> General</li>
-          <li><i class="icon-details"></i>Details</li>
-          <li><i class="icon-links"></i>Links</li>
-          <li><i class="icon-banners"></i>Banners</li>
-          <li><i class="icon-personaldata"></i> Personal data</li>
-          <li><i class="icon-payout"></i>Payout</li>
-          <li><i class="icon-postback"></i>ostback</li>
+          <li class="manager-item">
+            <img src="./images/photo.png" alt="img" />
+            <a href="#" class="link -lg">Mikhael E.</a>
+          </li>
         </ul>
       </div>
-    </aside>
+    </div>
+  </aside>
+<!--------------------------HEADER----------------------->
+  <header>
+    <div class="header-lg row">
+      <div class="hamb">
+        <div class="header-item">
+          <i id="hamburger" class="fas fa-bars"></i>
+        </div>
 
-    <div class="content-container">
-      <!--HEADER-->
-      <header class="row">
-        <div class="header-item">
-          <span class="wallet">
-            <i class="icon-wallet "></i>$1500.00<i
-              class="icon-arrow-down-small"
-            ></i>
-          </span>
-        </div>
-        <div class="header-item">
-          <span>
-            <i class="icon-notification"></i>
-          </span>
-        </div>
-        <div class="header-item"> 
-          <span>  <a  class="link link-lg" href="#"><i class="icon-profile"></i>Leonardo DiCapirop</a></span>
-        </div>
-        <div class="header-item">
+      </div>
+      <div class="header-item">
+        <span class="wallet">
+          <i class="icon-wallet"> </i> $1500.00
+          <i class="icon-arrow-down-small"> </i>
+        </span>
+      </div>
+
+      <div class="header-item">
+        <i class="icon-notification"></i>
+      </div>
+
+      <div class="header-item">
+        <i class="icon-profile"> </i> <a href="#">Leonardo DiCapirop</a>
+      </div>
+
+      <div class="header-item">
+        <i class="icon-login"></i>
+      </div>
+    </div>
+    <!--mobile version of header and nav-->
+    <div class="header-mobile row">
+
+      <div class="logo-item">
+        <img src="./images/logo.png">
+      </div>
+
+      <div id="toggleMobileTrigger" class="logo-item">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+    <nav id="nav-mobile" class="nav-mobile">
+
+      <ul class="navigation">
+        <li><i class="icon-general"></i>General</li>
+        <li><i class="icon-details"></i>Details</li>
+        <li><i class="icon-links"></i>Links</li>
+        <li><i class="icon-banners"></i>Banners</li>
+        <li><i class="icon-personaldata"></i> Personal data</li>
+        <li><i class="icon-payout"></i>Payout</li>
+        <li><i class="icon-postback"></i>Postback</li>
+        <!----------------------dropdown--------------------------->
+        <li id="dropdown-trigger"><i class="icon-arrow-down-small"></i> More</li>
+      </ul>
+
+      <ul id="dropdown" class="navigation light-list">
+        <li>
+          <i class="icon-wallet"> </i>
+          $1500.00
+          <i class="icon-arrow-down-small"> </i>
+        </li>
+        <li>
+          <i class="icon-notification"></i>
+          Notification
+        </li>
+        <li>
+          <i class="icon-profile"> </i>
+          Leonardo DiCapirop
+        </li>
+        <li>
           <i class="icon-login"></i>
+          Login
+        </li>
+          <div class="manager-nav">
+          <h3 class="medium-header">Your manager</h3>
+          <ul class="navigation">
+            <li class="manager-item">
+              <img src="./images/photo.png" alt="img" />
+              <a href="#" class="link"></a>Mikhael E.</a>
+            </li>
+          </ul>
         </div>
-      </header>
-    </div>
+      </ul>
+    </nav>
 
-    <div class="content-container">
-      <!--MAIN-->
-      <main>
-        <section class="section section-general-statisctic">
-          <h2 class="medium-header">General statistic</h2>
-          <div class="sub-section">
-            <div class="sub-section-container">
-              <a href="/styleguide.html">guide</a>
+  </header>
+
+  <!-------------------------MAIN CONTENT--------------------------->
+  <div id="container" class="container">
+    <main>
+      <!--section general statistic-->
+      <section class="section section-general">
+        <h2 class="medium-header">General Statistic</h2>
+        <div class="sub-section">
+          <div class="sub-section-container">
+            <div class="row input-wrapper">
+              <div class="input col-sm-8 col-lg-5">
+                <input type="text" placeholder="30.04.2020">
+                <input type="text" placeholder="01.05.2020">
+              </div>
+                <button class="btn btn-danger"><i class="icon-refresh"></i></button>
             </div>
           </div>
 
           <div class="sub-section">
-            <div class="sub-section-container">
-              S
-            </div>
+            <div class="sub-section-container row">
+              <div class="col-sm-12 col-lg-5 scroll-wrapper">
+                <table class="table-statistic">
+                  <tr>
+                    <td><span class="small-header">Visit Singups</span></td>
+                    <td><span>124</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="small-header">FTD</span></td>
+                    <td><span>444</span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-sm-12 col-lg-5 scroll-wrapper">
+                <table class="table-statistic">
+                  <tr>
+                    <td><span class="small-header">Net deposit</span></td>
+                    <td><span>656</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="small-header">Turn over</span></td>
+                    <td><span>334</span></td>
+                  </tr>
+                </table>
+              </div>
           </div>
-        </section>
-      </main>
-    </div>
+          <div class="sub-section-container graph">
+            <h3 class="small-header">Earning chart</h3>
+            <img src="./images/graph.png">
+          </div>
+        </div>
+      </section>
 
-    <script src="/js/script.js"></script>
-  </body>
+      <!--section links-->
+      <section class="section section-links">
+        <h2 class="medium-header">Links</h2>
+        <div class="sub-section">
+          <div class="sub-section-container">
+            <button class="btn btn-danger">+ add new</button>
+            <div class="scroll-wrapper">
+              <table>
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <h3 class="small-header">Home page</h3>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="">
+                      https://www.youtube.com/
+                    </a>
+                  </td>
+                  <td>
+                    <a class="link-sm" href="#">
+                      <i class="icon-links"></i>
+                    </a>
+                  </td>
+                  <td>
+                    <a class=" link-sm" href="#">
+                      <i class="icon-trash"></i></a>
+                  </td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            <button class="btn btn-danger">+ add new</button>
+          </div>
+        </div>
+      </section>
+
+
+  </div>
+  </main>
+  </div>
+
+
+
+  <script src="/js/script.js"></script>
+</body>
+
 </html>
