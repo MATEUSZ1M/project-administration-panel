@@ -11,14 +11,16 @@
   display: flex;
 }
 
-.visible {
-  opacity: 1;
-  width: 235px;
-}
+
 
 .container-active {
   transition:  0.3s;
-  padding-left: 235px;
+  padding-left: $sidebar-with;
+}
+
+.visible{
+  opacity: 1;
+  width: $sidebar-with;
 }
 
 
