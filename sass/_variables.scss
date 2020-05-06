@@ -26,12 +26,15 @@ $color-incoming: #f3f3f1;
 $color-aside: #191919;
 $color-aside-selected: #282828;
 
+html {
+    font-size: 14px;
+}
 /* Font sizes */
-$xs-font-size: 12px;
-$sm-font-size: 16px;
-$med-font-size: 17px;
-$lg-font-size: 20px;
-$xlg-font-size: 24px;
+$xs-font-size: 1rem;
+$sm-font-size: 1.2rem;
+$med-font-size: 1.4rem;
+$lg-font-size: 1.7rem;
+$xlg-font-size: 2rem;
 
 /* Fonts */
 $font-family-main: 'Lato', sans-serif;
@@ -40,6 +43,9 @@ $font-family-main: 'Lato', sans-serif;
 $margin-lg: 25px;
 $margin-sm: 5px;
 
-$sidebar-with: 235px;
+$width-mobile-nav: 100vw;
+$width-desktop-nav: 235px;
+
+$height-nav: 100vh;
 
 

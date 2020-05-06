@@ -1,49 +1,41 @@
-const hamburger = document.querySelector("#hamburger");
-const sidenav = document.querySelector(".sidenav");
-const close = document.querySelector("#close");
-const container = document.querySelector("#container");
+const hamburger = document.querySelectorAll('.hamburger');
+const menu = document.querySelector('.menu');
+const container = document.querySelector('.container');
+const dropDownTrigger = document.querySelector('.drop-down-trigger');
+const dropDown = document.querySelector('.light-list');
 
-hamburger.addEventListener("click", function () {
-  sidenav.classList.add("visible");
-  container.classList.add("container-active");
+// hamburger 
+for(let hamburgerTrigger of hamburger){
+  console.log(hamburgerTrigger);
+
+  hamburgerTrigger.addEventListener('click', function(){
+    menu.classList.toggle('visible');
+    container.classList.toggle('container-active');
+  });
+
+}
+//
+dropDownTrigger.addEventListener('click', function(){
+  console.log('dropDown ', dropDown);
+  dropDown.classList.toggle('visible-dropdown');
 });
 
-close.addEventListener("click", function () {
-  sidenav.classList.remove("visible");
-  container.classList.remove("container-active");
+
+window.addEventListener('resize', function (event) {
+ menu.classList.remove('visible');
+ container.classList.remove('container-active');
+ dropDown.classList.remove('visible-dropdown');
+
 });
-
-//mobile
-const toggleMobileTrigger = document.querySelector("#toggleMobileTrigger");
-const toggleDropdownTrigger = document.querySelector("#dropdown-trigger");
-const navMobile = document.querySelector("#nav-mobile");
-const dropdown = document.querySelector("#dropdown");
-
-toggleMobileTrigger.addEventListener("click", function () {
-  console.log("dupa");
-  navMobile.classList.toggle("active-mobile");
-});
-
-toggleDropdownTrigger.addEventListener("click", function () {
-  console.log("pipa");
-  dropdown.classList.toggle("active-dropdown");
-});
-
-window.addEventListener("resize", function (event) {
-  sidenav.classList.remove("visible");
-  container.classList.remove("container-active");
-  navMobile.classList.remove("active-mobile");
-});
-
 
 //jquery scroll sections
 
-$("a[href^='#']").click(function (e) {
+$('a[href^="#"]').click(function (e) {
   e.preventDefault();
 
-  var position = $($(this).attr("href")).offset().top;
+  var position = $($(this).attr('href')).offset().top;
 
-  $("body, html").animate(
+  $('body, html').animate(
     {
       scrollTop: position,
     } /* speed */

@@ -11,100 +11,18 @@
 </head>
 
 <body>
-  <!-------------------ASIDE------------------------->
-  <aside class="sidenav">
-    <div id="navigation" class="logo">
+  <!-------------------MENU------------------------->
+  <aside class="menu">
+    <div class="logo">
       <div class="row">
-        <div class="logo-item">
+        <div class="header-item">
           <img src="./images/logo.png">
         </div>
-
-        <div id="close" class="logo-item">
+        <div  class="header-item hamburger">
           <i class="fas fa-bars"></i>
         </div>
       </div>
-
-      <ul class="navigation">
-        <a href="#section-general">
-          <li><i class="icon-general"></i>General</li>
-        </a>
-        <a href="#section-details">
-          <li><i class="icon-details"></i>Details</li>
-        </a>
-        <a href="#section-links">
-          <li><i class="icon-links"></i>Links</li>
-        </a>
-        <a href="#section-banners">
-          <li><i class="icon-banners"></i>Banners</li>
-        </a>
-        <a href="#section-personal">
-          <li><i class="icon-personaldata"></i> Personal data</li>
-        </a>
-        <a href="#section-payout">
-          <li><i class="icon-payout"></i>Payout</li>
-        </a>
-        <a href="#section-postback">
-          <li><i class="icon-postback"></i>Postback</li>
-        </a>
-      </ul>
-
-      <div class="manager-nav">
-        <h3 class="medium-header">Your manager</h3>
-        <ul class="navigation">
-          <li class="manager-item">
-            <img src="./images/photo.png" alt="img" />
-            <a href="#" class="link">Mikhael E.</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </aside>
-  <!--------------------------HEADER----------------------->
-  <header>
-    <div class="header-lg row">
-
-      <div class="header-item">
-        <img class="invert" src="./images/logo.png">
-      </div>
-      <div class="hamb">
-        <div class="header-item">
-          <i id="hamburger" class="fas fa-bars"></i>
-        </div>
-
-      </div>
-      <div class="header-item">
-        <span class="wallet">
-          <i class="icon-wallet"> </i> $1500.00
-          <i class="icon-arrow-down-small"> </i>
-        </span>
-      </div>
-
-      <div class="header-item">
-        <i class="icon-notification"></i>
-      </div>
-
-      <div class="header-item">
-        <i class="icon-profile"> </i> <a href="#">Leonardo DiCapirop</a>
-      </div>
-
-      <div class="header-item">
-        <i class="icon-login"></i>
-      </div>
-    </div>
-    <!--mobile version of header and nav-->
-    <div class="header-mobile row">
-
-      <div class="logo-item">
-        <img src="./images/logo.png">
-      </div>
-
-      <div id="toggleMobileTrigger" class="logo-item">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-
-    <nav id="nav-mobile" class="nav-mobile">
-
+      <!--list of sections-->
       <ul class="navigation">
         <li><i class="icon-general"></i>General</li>
         <li><i class="icon-details"></i>Details</li>
@@ -113,43 +31,84 @@
         <li><i class="icon-personaldata"></i> Personal data</li>
         <li><i class="icon-payout"></i>Payout</li>
         <li><i class="icon-postback"></i>Postback</li>
-        <!----------------------dropdown--------------------------->
-        <li id="dropdown-trigger"><i class="icon-arrow-down-small"></i> More</li>
       </ul>
+      <!--manager section/disable on mobile-->
+      <div class="mobile-hidden manager">
+        <h3 class="medium-header">Your Manager</h3>
+        <ul class="navigation">
+          <li> 
+            <img src="./images/photo.png" alt="photo">
+            <a href="#">John Smith</a>
+          </li>
+        </ul>
+      </div>
+      <!---------content visible only on mobile------------>
+        <ul class="navigation desktop-hidden">
+          <!--dropdown-trigger-->
+          <li class="drop-down-trigger"><i class="icon-arrow-down-small"></i> More</li>
+        </ul>
+        <ul class="navigation light-list "> <!---To do-->
+          <li>
+            <i class="icon-wallet"> </i>
+            $1500.00
+            <i class="icon-arrow-down-small"> </i>
+          </li>
+          <li>
+            <i class="icon-notification"></i>
+            Notification
+          </li>
+          <li>
+            <i class="icon-profile"> </i>
+            Leonardo DiCapirop
+          </li>
+          <li>
+            <i class="icon-login"></i>
+            Login
+          </li>
+          <li>
+        </ul>
+      <!-----------end of content visible only on mobile---------->
+      </div>
+       
+    </div>
+  </aside>
+  <!--------------------------HEADER----------------------->
+  <header>
+    <div class="nav-header">
+      <div class="header-item">
+        <img class="logo" src="./images/logo.png">
+      </div>
 
-      <ul id="dropdown" class="navigation light-list">
-        <li>
-          <i class="icon-wallet"> </i>
-          $1500.00
-          <i class="icon-arrow-down-small"> </i>
-        </li>
-        <li>
-          <i class="icon-notification"></i>
-          Notification
-        </li>
-        <li>
-          <i class="icon-profile"> </i>
-          Leonardo DiCapirop
-        </li>
-        <li>
-          <i class="icon-login"></i>
-          Login
-        </li>
-        <div class="manager-nav">
-          <h3 class="medium-header">Your manager</h3>
-          <ul class="navigation">
-            <li class="manager-item">
-              <img src="./images/photo.png" alt="img" />
-              <a href="#" class="link"></a>Mikhael E.</a>
-            </li>
-          </ul>
+      <div class="header-item hamburger">
+        <i id="hamburger" class="fas fa-bars"></i>
+      </div>
+
+
+      <div class="mobile-hidden">
+        <div class="header-item">
+          <span class="wallet">
+            <i class="icon-wallet"> </i> $1500.00
+            <i class="icon-arrow-down-small"> </i>
+          </span>
         </div>
-      </ul>
-    </nav>
+
+        <div class="header-item">
+          <i class="icon-notification"></i>
+        </div>
+
+        <div class="header-item">
+          <i class="icon-profile"> </i> <a href="#">Leonardo DiCapirop</a>
+        </div>
+
+        <div class="header-item">
+          <i class="icon-login"></i>
+        </div>
+      </div>
+    </div>
 
   </header>
   <!-------------------------MAIN CONTENT--------------------------->
-  <main id="container">
+  <main class="container">
     <!--section general statistic-->
     <section id="section-general" class="section">
       <h2 class="medium-header">General Statistic</h2>
