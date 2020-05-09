@@ -218,6 +218,11 @@ header {
   display: none;
 }
 
+.hamburger {
+  margin-left: auto;
+  border: none;
+}
+
 .navigation-vertical li:nth-child(7n + 7) {
   display: none;
 }
@@ -228,6 +233,24 @@ header {
 
 .navigation-vertical li:nth-child(7n + 9) {
   display: none;
+}
+
+.go-up {
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  left: 2vh;
+  background-color: RGBA(40, 40, 40, 0.5);
+  height: 45px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.go-up i {
+  display: block;
+  color: #f3f3f1;
+  margin: auto;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 767px) {
@@ -363,6 +386,10 @@ header {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .go-up {
+    display: -ms-flexbox;
+    display: flex;
+  }
   .mobile-hidden {
     display: -ms-flexbox;
     display: flex;
@@ -377,7 +404,7 @@ header {
   .nav-header .logo {
     filter: invert(1);
   }
-  .header-item.hamburger {
+  .hamburger {
     margin-left: 0;
     margin-right: auto;
   }
@@ -1297,10 +1324,6 @@ textarea {
   height: 7vh;
 }
 
-.hamburger {
-  margin-left: auto;
-}
-
 .navigation {
   margin: 0;
   padding: 0;
@@ -1308,9 +1331,18 @@ textarea {
   margin: 0;
 }
 
-.navigation li {
-  font-size: 1.4rem;
+.navigation .drop-down-trigger {
   color: #f3f3f1;
+}
+
+.navigation a {
+  color: #f3f3f1;
+  width: 100%;
+  display: block;
+}
+
+.navigation li {
+  font-size: 1.2rem;
   padding: 1em 0;
   list-style: none;
   cursor: pointer;
@@ -1373,5 +1405,84 @@ textarea {
 .manager li img, .manager li a {
   display: block;
   padding-left: 1em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  margin: auto;
+  padding-bottom: 2em;
+  background-color: #ffffff;
+  position: relative;
+  max-width: 900px;
+  display: none;
+}
+
+.modal input,
+.modal button,
+.modal select {
+  height: 100%;
+  width: 100%;
+}
+
+.modal .checkbox-container {
+  height: 300px;
+}
+
+.modal .medium-header,
+.modal .small-header {
+  padding: 0 0 0 1em;
+}
+
+.modal .sub-section {
+  padding: 2em 0;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+button.js--close-modal {
+  height: auto;
+}
+
+.button-wrapper-modal {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-wrapper-modal button {
+  width: 90px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -18,62 +18,63 @@
         <div class="header-item">
           <img src="./images/logo.png">
         </div>
-        <div  class="header-item hamburger">
+        <div class="header-item hamburger">
           <i class="fas fa-bars"></i>
         </div>
       </div>
       <!--list of sections-->
       <ul class="navigation">
-        <li><i class="icon-general"></i>General</li>
-        <li><i class="icon-details"></i>Details</li>
-        <li><i class="icon-links"></i>Links</li>
-        <li><i class="icon-banners"></i>Banners</li>
-        <li><i class="icon-personaldata"></i> Personal data</li>
-        <li><i class="icon-payout"></i>Payout</li>
-        <li><i class="icon-postback"></i>Postback</li>
+        <li><a href="#section-general"><i class="icon-general"></i>General</a></li>
+        <li><a href="#section-details"><i class="icon-details"></i>Details</a></li>
+        <li><a href="#section-links"><i class="icon-links"></i>Links</a></li>
+        <li><a href="#section-banners"><i class="icon-banners"></i>Banners</a></li>
+        <li><a href="#section-personal"><i class="icon-personaldata"></i> Personal data</a></li>
+        <li><a href="#section-payout"><i class="icon-payout"></i>Payout</a></li>
+        <li><a href="#section-postback"><i class="icon-postback"></i>Postback</a></li>
       </ul>
       <!--manager section/disable on mobile-->
       <div class="mobile-hidden manager">
         <h3 class="medium-header">Your Manager</h3>
         <ul class="navigation">
-          <li> 
+          <li>
             <img src="./images/photo.png" alt="photo">
             <a href="#">John Smith</a>
           </li>
         </ul>
       </div>
       <!---------content visible only on mobile------------>
-        <ul class="navigation desktop-hidden">
-          <!--dropdown-trigger-->
-          <li class="drop-down-trigger"><i class="icon-arrow-down-small"></i> More</li>
-        </ul>
-        <ul class="navigation light-list "> <!---To do-->
-          <li>
-            <i class="icon-wallet"> </i>
-            $1500.00
-            <i class="icon-arrow-down-small"> </i>
-          </li>
-          <li>
-            <i class="icon-notification"></i>
-            Notification
-          </li>
-          <li>
-            <i class="icon-profile"> </i>
-            Leonardo DiCapirop
-          </li>
-          <li>
-            <i class="icon-login"></i>
-            Login
-          </li>
-          <li>
-        </ul>
+      <ul class="navigation desktop-hidden">
+        <!--dropdown-trigger-->
+        <li class="drop-down-trigger"><i class="icon-arrow-down-small"></i> More</li>
+      </ul>
+      <ul class="navigation light-list ">
+        <!---To do-->
+        <li>
+          <i class="icon-wallet"> </i>
+          $1500.00
+          <i class="icon-arrow-down-small"> </i>
+        </li>
+        <li>
+          <i class="icon-notification"></i>
+          Notification
+        </li>
+        <li>
+          <i class="icon-profile"> </i>
+          Leonardo DiCapirop
+        </li>
+        <li>
+          <i class="icon-login"></i>
+          Login
+        </li>
+        <li>
+      </ul>
       <!-----------end of content visible only on mobile---------->
-      </div>
-       
+    </div>
+
     </div>
   </aside>
   <!--------------------------HEADER----------------------->
-  <header>
+  <header id="header">
     <div class="nav-header">
       <div class="header-item">
         <img class="logo" src="./images/logo.png">
@@ -82,7 +83,6 @@
       <div class="header-item hamburger">
         <i id="hamburger" class="fas fa-bars"></i>
       </div>
-
 
       <div class="mobile-hidden">
         <div class="header-item">
@@ -96,12 +96,12 @@
           <i class="icon-notification"></i>
         </div>
 
-        <div class="header-item">
-          <i class="icon-profile"> </i> <a href="#">Leonardo DiCapirop</a>
+        <div class="header-item modal-trigger" data-tag="login-modal">
+          <i class="icon-profile"> </i> User
         </div>
 
-        <div class="header-item">
-          <i class="icon-login"></i>
+        <div class="header-item modal-trigger" data-tag="quit-modal">
+          <i data-tag="#login-modal" class="icon-login"></i>
         </div>
       </div>
     </div>
@@ -353,7 +353,7 @@
       <h2 class="medium-header">Links</h2>
       <div class="sub-section">
         <div class="sub-section-container">
-          <button class="btn btn-danger">+ add new</button>
+          <button class="btn btn-danger modal-trigger" data-tag="add-url">+ add new</button>
           <div class="scroll-wrapper">
             <table>
               <tr>
@@ -710,11 +710,6 @@
                 <label for="callAgain">callAgain</label>
               </div>
             </div>
-
-
-
-
-
           </div>
 
           <div class="col-sm-12 col-md-6 statuses">
@@ -728,10 +723,223 @@
           <button class="btn btn-danger right-btn" type="submit">Create Pixel</button>
       </form>
     </section>
+
+    <div class="go-up">
+      <i class="fas fa-bars hamburger"></i>
+    </div>
   </main>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="/js/script.js"></script>
+  <!-----------------------OVERLAY---------------------------------->
+  <div class="overlay" id="overlay">
+
+    <!--LOGIN -MODAL-->
+    <div class="modal col-sm-12 col-md-8 col-lg-6" id="login-modal">
+
+      <h3 class="medium-header">Login</h3>
+      <div class="sub-section">
+        <form method="" action="">
+          <div class="row">
+            <div class="col-sm-10 col-md-4">
+              <input type="text" placeholder="login name">
+            </div>
+            <div class="col-sm-10 col-md-4">
+              <input type="password" placeholder="password">
+            </div>
+            <div class="col-sm-5 col-md-3">
+              <button type="submit" class="js--close-modal btn btn-danger">ENTER</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--QUIT MODAL-->
+    <div class="modal col-sm-5" id="quit-modal">
+      <h3 class="small-header">Do you really want to Quit?</h3>
+      <div class="sub-section ">
+        <div class="button-wrapper-modal">
+          <button type="submit" class="js--close-modal btn btn-normal">CANCEL</button>
+          <button type="submit" class="js--close-modal btn btn-danger">QUIT</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!--ADD URL MODAL-->
+    <div class="modal col-sm-12 " id="add-url">
+      <div class="btn-close js--close-modal">x</div>
+
+      <h3 class="medium-header">Add url</h3>
+      <div class="sub-section">
+        <form method="" action="">
+          <div class="row">
+            <div class="col-sm-12">
+              <h4 class="small-header">Scheme name</h4>
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" placeholder="Name">
+                </div>
+                <div class="col-md-4">
+                  <select>
+                    <option value="placeholder">Placeholder</option>
+                  </select>
+                </div>
+                <div class="col-md-2">
+                  <select>
+                    <option>Polish</option>
+                    <option>English</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="sub-section row">
+        <div class="col-md-3">
+          <h4 class="small-header">Weight-Height</h4>
+          <select>
+            <option>Select</option>
+            <option>Placeholder</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="small-header">Weight-Height</h4>
+          <select>
+            <option>Select</option>
+            <option>Placeholder</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <h4 class="small-header">Weight-Height</h4>
+          <select>
+            <option>Select</option>
+            <option>Placeholder</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6 statuses">
+          <h3 class="small-header">Select banners</h3>
+          <div class="checkbox-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="checkNumber" name="checkNumber">
+              <label for="checkNumber">checkNumber</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noAnswer" name="noAnswer">
+              <label for="noAnswer">noAnswer</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="checkNumber" name="checkNumber">
+              <label for="checkNumber">checkNumber</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noAnswer" name="noAnswer">
+              <label for="noAnswer">noAnswer</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 statuses">
+          <h3 class="small-header">Select-websites</h3>
+          <div class="checkbox-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="checkNumber" name="checkNumber">
+              <label for="checkNumber">checkNumber</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noAnswer" name="noAnswer">
+              <label for="noAnswer">noAnswer</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="checkNumber" name="checkNumber">
+              <label for="checkNumber">checkNumber</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noAnswer" name="noAnswer">
+              <label for="noAnswer">noAnswer</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="noCall" name="noCall">
+              <label for="noCall">noCall</label>
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="callAgain" name="callAgain">
+              <label for="callAgain">callAgain</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <input type="text">
+        </div>
+        <div class="col-md-3 row">
+          <button class="btn btn-disabled">COPY LINK</button>
+          <button type="submit" class="js--close-modal btn btn-danger">SAVE</button>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="/js/script.js"></script>
 </body>
 
 </html>

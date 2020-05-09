@@ -144,12 +144,36 @@ header {
   display: none;
 }
 
+//hamburger
+.hamburger{
+  margin-left: auto;
+  border: none;
+}
+
 .navigation-vertical {
     @for $i from 7 through 9 {
       li:nth-child(7n + #{$i}) {
         display: none;
       }
     }
+}
+
+.go-up{
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  left: 2vh;
+  background-color: RGBA(40,40,40,0.5);
+  height: 45px;
+  width: auto;
+  border-radius: 5px;
+
+  i{
+    display: block;
+    color: $color-incoming;
+    margin: auto;
+    font-size: $sm-font-size;
+  }
 }
 
 @media (max-width: 767px) {
@@ -171,6 +195,10 @@ header {
 @media (min-width: 768px) {
   @include grid("md");
 
+  .go-up{
+    display: flex;
+  }
+
   .mobile-hidden {
     display: flex;
   }
@@ -187,7 +215,7 @@ header {
     }
   }
 
-  .header-item.hamburger {
+  .hamburger {
     margin-left: 0;
     margin-right: auto;
   }
