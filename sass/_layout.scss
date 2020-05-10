@@ -5,7 +5,8 @@
   }
 
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
+    height: 5px;
     background-color: #f5f5f5;
   }
 
@@ -13,6 +14,7 @@
     background-color: $color-medium;
   }
 }
+
 /*grid*/
 *,
 *::before,
@@ -49,9 +51,10 @@ header {
   max-width: 1650px;
   margin: 0 auto;
 }
+
 //section general
 .section {
-  max-width: 1250px;
+  max-width: 1000px;
   width: 90%;
   background: $color-light;
   margin: 20px auto;
@@ -71,6 +74,7 @@ header {
   margin: 0 auto;
   justify-content: space-around;
 }
+
 // to do
 .nav-header {
   background-color: $color-aside;
@@ -90,6 +94,7 @@ header {
     border-right: none;
   }
 }
+
 //  classes used by js script
 //menu selector
 .menu {
@@ -107,13 +112,13 @@ header {
 //sliding menu
 .container-active {
   transition: 0.4s;
-  //padding-left: $sidebar-with-mobile;
 }
 
 .visible {
   opacity: 1;
   top: 0;
 }
+
 // mobile doropdown
 .navigation.light-list {
   background: $color-ofline;
@@ -139,36 +144,43 @@ header {
     display: block;
   }
 }
+
 // end of js classes
 .mobile-hidden {
   display: none;
 }
 
 //hamburger
-.hamburger{
+.hamburger {
   margin-left: auto;
   border: none;
 }
 
 .navigation-vertical {
-    @for $i from 7 through 9 {
-      li:nth-child(7n + #{$i}) {
-        display: none;
-      }
+  @for $i from 7 through 9 {
+    li:nth-child(7n + #{$i}) {
+      display: none;
     }
+  }
 }
 
-.go-up{
+.align-bottom {
+  display: flex;
+  margin-top: auto;
+}
+
+.go-up {
   display: none;
   position: fixed;
   bottom: 2vh;
   left: 2vh;
-  background-color: RGBA(40,40,40,0.5);
+  background-color: RGBA(40, 40, 40, 0.5);
   height: 45px;
-  width: auto;
+  width: 45px;
   border-radius: 5px;
+  cursor: pointer;
 
-  i{
+  i {
     display: block;
     color: $color-incoming;
     margin: auto;
@@ -195,7 +207,7 @@ header {
 @media (min-width: 768px) {
   @include grid("md");
 
-  .go-up{
+  .go-up {
     display: flex;
   }
 
@@ -206,12 +218,15 @@ header {
   .light-list {
     display: none;
   }
+
   .nav-header {
     background-color: $color-light;
     position: relative;
 
     .logo {
       filter: invert(1);
+      width: 235px;
+      margin-right: auto;
     }
   }
 
@@ -245,7 +260,7 @@ header {
         display: block;
       }
     }
-}
+  }
 }
 
 @media (min-width: 992px) {
@@ -258,6 +273,7 @@ header {
 
 @media (min-width: 1200px) {
   @include grid("xl");
+
   .sub-section-container {
     width: 60%;
   }

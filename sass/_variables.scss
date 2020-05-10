@@ -3,7 +3,7 @@ $color-light: #ffffff;
 $color-dark: #333333;
 
 $color-medium: #979797;
-$color-medium-hover:  #f2f2f2;;
+$color-medium-hover: #f2f2f2;
 
 $color-disabled: #e3e3e3;
 $color-error: #ff0000;
@@ -11,7 +11,7 @@ $color-error: #ff0000;
 $color-link: #56819f;
 
 $color-positive-notification-light: #96cc9b;
-$color-positive-notification-dark:  #74b67a;
+$color-positive-notification-dark: #74b67a;
 $color-negative-notification-light: #ec7171;
 $color-negative-notification-dark: #de5252;
 
@@ -20,20 +20,22 @@ $color-danger-hover: #ffa200;
 
 $color-online: #04ae00;
 $color-ofline: #e3e3e3;
-$color-body:  #f5f5f2;
+$color-body: #f5f5f2;
 $color-incoming: #f3f3f1;
 
 $color-aside: #191919;
 $color-aside-selected: #282828;
 
 html {
-    font-size: 14px;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
+
 /* Font sizes */
 $xs-font-size: 1rem;
 $sm-font-size: 1.2rem;
-$med-font-size: 1.4rem;
-$lg-font-size: 1.7rem;
+$med-font-size: 1.3rem;
+$lg-font-size: 1.5rem;
 $xlg-font-size: 2rem;
 
 /* Fonts */
@@ -47,5 +49,3 @@ $width-mobile-nav: 100vw;
 $width-desktop-nav: 235px;
 
 $height-nav: 100vh;
-
-
