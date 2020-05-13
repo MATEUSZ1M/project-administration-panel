@@ -13,7 +13,7 @@ function toggleMenu() {
 
 //dropdown
 function toggleDropdown() {
-  dropDown.classList.toggle('visible-dropdown', true);
+  dropDown.classList.toggle('visible-dropdown');
 }
 
 function clearMenu() {

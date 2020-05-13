@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   position: fixed;
-  border-bottom:  rgba(66, 48, 48, 0.1);
+  border-bottom: rgba(66, 48, 48, 0.1);
   box-shadow: 0 0 10px rgba(66, 48, 48, 0.1);
 }
 
@@ -16,6 +16,7 @@
 
   .drop-down-trigger {
     color: $color-incoming;
+    padding: 1em;
   }
 
   a {

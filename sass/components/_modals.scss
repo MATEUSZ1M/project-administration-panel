@@ -33,12 +33,12 @@
   input,
   select {
     width: 98%;
+    margin: 1em;
   }
 
   .checkbox-container {
     height: 300px;
   }
-
 
   .medium-header,
   .small-header {
@@ -48,7 +48,6 @@
   .sub-section {
     padding: 2em 0;
   }
-
 }
 
 .modal.show {
