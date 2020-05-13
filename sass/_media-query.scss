@@ -4,13 +4,6 @@
   .section {
     width: 98%;
 
-    &:first-of-type {
-      margin-top: 9vh;
-    }
-
-    &:last-of-type {
-      margin-bottom: 5vh;
-    }
   }
 }
 
@@ -38,7 +31,6 @@
 
   .nav-header {
     background-color: $color-light;
-    position: relative;
 
     .logo {
       filter: invert(1);

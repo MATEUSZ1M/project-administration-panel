@@ -46,6 +46,14 @@ header {
   box-shadow: 0 0 10px rgba(66, 48, 48, 0.1);
   overflow: hidden;
   padding-bottom: 40px;
+
+  &:first-of-type {
+    margin-top: 9vh;
+  }
+
+  &:last-of-type {
+    margin-bottom: 5vh;
+  }
 }
 
 .sub-section {
