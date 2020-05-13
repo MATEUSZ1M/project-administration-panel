@@ -1,0 +1,7 @@
+.navigation-vertical {
+  @for $i from 7 through 9 {
+    li:nth-child(7n + #{$i}) {
+      display: none;
+    }
+  }
+}

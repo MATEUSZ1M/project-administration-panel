@@ -1,14 +1,34 @@
-@import "variables";
-@import "mixins";
-@import "layout";
 @import "normalize";
-// /* Components */
 
-@import "components";
-// import "components/form_field";
+@import "variables";
 
-// /* Sections */
-// import "section/registration_form";
+@import "mixins";
 
-// /* Pages / Views */
-// import "pages/registration";
+@import "layout";
+/* Components */
+//scroll bars
+@import "components/scroll-bar";
+//vertical nav
+@import "components/vertical-nav";
+//typography
+@import "components/typography";
+//buttons
+@import "components/buttons";
+//links
+@import "components/links";
+//tables
+@import "components/tables";
+//logo
+@import "components/logo";
+//used by js
+@import "components/classes-js";
+//menu&header
+@import "components/menu-navigation";
+//fixed-button
+@import "components/fixed-btn";
+//modals
+@import "components/modals";
+//inputs 
+@import "components/inputs";
+//media query
+@import "media-query";

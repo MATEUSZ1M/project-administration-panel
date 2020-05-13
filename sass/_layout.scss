@@ -1,20 +1,3 @@
-//scroll bar
-* {
-  &::-webkit-scrollbar-track {
-    background-color: $color-incoming;
-  }
-
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-    background-color: #f5f5f5;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $color-medium;
-  }
-}
-
 /*grid*/
 *,
 *::before,
@@ -48,8 +31,10 @@ header {
 
 .container {
   width: 100%;
+  height: 100vh;
   max-width: 1650px;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 //section general
@@ -75,15 +60,6 @@ header {
   justify-content: space-around;
 }
 
-// to do
-.nav-header {
-  background-color: $color-aside;
-  color: $color-light;
-  width: 100%;
-  display: flex;
-  position: fixed;
-}
-
 .statuses {
   border: solid 1px rgba(0, 0, 0, 0.1);
   border-left: none;
@@ -95,186 +71,14 @@ header {
   }
 }
 
-//  classes used by js script
-//menu selector
-.menu {
-  height: $height-nav;
-  top: -$height-nav;
-  width: $width-mobile-nav;
-  position: fixed;
-  z-index: 1;
-  overflow-x: hidden;
-  transition: 0.4s;
-  opacity: 0;
-  background: $color-aside;
+.scroll-wrapper {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  margin: auto;
 }
 
-//sliding menu
-.container-active {
-  transition: 0.4s;
-}
-
-.visible {
-  opacity: 1;
-  top: 0;
-}
-
-// mobile doropdown
-.navigation.light-list {
-  background: $color-ofline;
-  transition: 0.3s;
-  position: fixed;
-  height: 0;
-
-  li {
-    display: none;
-    color: $color-aside;
-    transition: 0.3s;
-
-    &:hover {
-      background: $color-danger-hover;
-    }
-  }
-}
-
-.navigation.light-list.visible-dropdown {
-  height: 80vh;
-
-  li {
-    display: block;
-  }
-}
-
-// end of js classes
-.mobile-hidden {
-  display: none;
-}
-
-//hamburger
-.hamburger {
-  margin-left: auto;
-  border: none;
-}
-
-.navigation-vertical {
-  @for $i from 7 through 9 {
-    li:nth-child(7n + #{$i}) {
-      display: none;
-    }
-  }
-}
-
-.align-bottom {
+.align-bottom{
   display: flex;
-  margin-top: auto;
-}
-
-.go-up {
-  display: none;
-  position: fixed;
-  bottom: 2vh;
-  left: 2vh;
-  background-color: RGBA(40, 40, 40, 0.5);
-  height: 45px;
-  width: 45px;
-  border-radius: 5px;
-  cursor: pointer;
-
-  i {
-    display: block;
-    color: $color-incoming;
-    margin: auto;
-    font-size: $sm-font-size;
-  }
-}
-
-@media (max-width: 767px) {
-  @include grid("sm");
-
-  .section {
-    width: 98%;
-
-    &:first-of-type {
-      margin-top: 9vh;
-    }
-
-    &:last-of-type {
-      margin-bottom: 5vh;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  @include grid("md");
-
-  .go-up {
-    display: flex;
-  }
-
-  .mobile-hidden {
-    display: flex;
-  }
-
-  .light-list {
-    display: none;
-  }
-
-  .nav-header {
-    background-color: $color-light;
-    position: relative;
-
-    .logo {
-      filter: invert(1);
-      width: 235px;
-      margin-right: auto;
-    }
-  }
-
-  .hamburger {
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-  .container-active {
-    padding-left: $width-desktop-nav;
-  }
-
-  .menu {
-    width: $width-desktop-nav;
-    top: 0;
-    bottom: 0;
-    left: -$width-desktop-nav;
-  }
-
-  .visible {
-    left: 0;
-  }
-
-  .desktop-hidden {
-    display: none;
-  }
-
-  .navigation-vertical {
-    @for $i from 7 through 9 {
-      li:nth-child(7n + #{$i}) {
-        display: block;
-      }
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  @include grid("lg");
-
-  .sub-section-container {
-    width: 80%;
-  }
-}
-
-@media (min-width: 1200px) {
-  @include grid("xl");
-
-  .sub-section-container {
-    width: 60%;
-  }
+  align-items: flex-end;
 }

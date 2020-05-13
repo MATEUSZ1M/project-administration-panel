@@ -1,0 +1,43 @@
+body {
+  font-family: $font-family-main;
+}
+
+.lage-header,
+.medium-header {
+  color: $color-medium;
+  padding: 1.2em;
+  text-transform: uppercase;
+}
+
+//page headerh1
+.lage-header {
+  font-size: $xl-font-size;
+}
+
+//section header h2
+.medium-header {
+  font-size: $md-font-size;
+  font-weight: 700;
+}
+
+.small-header {
+  font-size: $sm-font-size;
+  color: $color-medium;
+  padding: 1.2em;
+  font-weight: 700;
+}
+
+p {
+  font-size: $md-font-size;
+  color: $color-dark;
+  font-weight: 300;
+}
+
+i {
+  padding: 1em;
+}
+
+.error {
+  text-transform: uppercase;
+  color: $color-error;
+}

@@ -1,0 +1,18 @@
+.logo {
+  filter: invert(0);
+  width: 100%;
+}
+
+.logo-item {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  color: $color-incoming;
+  font-size: $xl-font-size;
+  padding: 15px;
+
+  &:nth-of-type(2) {
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

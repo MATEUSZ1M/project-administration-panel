@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-link;
+
+  &:hover {
+    color: $color-danger-hover;
+  }
+}
+
+.link-sm {
+  font-size: $xs-font-size;
+}
+
+.link-lg {
+  font-size: $lg-font-size;
+}

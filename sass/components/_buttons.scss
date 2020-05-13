@@ -1,0 +1,51 @@
+.btn {
+  padding: 1em;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  color: $color-light;
+  display: block;
+  margin: 0.5em auto;
+}
+
+.btn-normal {
+  background: $color-medium;
+  color: $color-light;
+
+  &:hover {
+    background: $color-medium-hover;
+  }
+}
+
+.btn-light {
+  background: $color-light;
+  color: $color-medium;
+
+  &:hover {
+    background: $color-medium-hover;
+    color: $color-dark;
+  }
+}
+
+.btn-danger {
+  background: $color-danger;
+
+  &:hover {
+    background: $color-danger-hover;
+  }
+}
+
+.btn-disabled {
+  background: $color-disabled;
+  cursor: not-allowed;
+}
+
+.right-btn {
+  margin-right: 2em;
+  margin-left: auto;
+}
+
+th .btn {
+  margin-left: 0;
+}

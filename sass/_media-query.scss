@@ -1,0 +1,97 @@
+@media (max-width: 767px) {
+  @include grid("sm");
+
+  .section {
+    width: 98%;
+
+    &:first-of-type {
+      margin-top: 9vh;
+    }
+
+    &:last-of-type {
+      margin-bottom: 5vh;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @include grid("md");
+
+  .fixed {
+    display: flex;
+  }
+
+  .modal {
+    input,
+    select {
+      margin: 1em;
+    }
+  }
+
+  .mobile-hidden {
+    display: flex;
+  }
+
+  .light-list {
+    display: none;
+  }
+
+  .nav-header {
+    background-color: $color-light;
+    position: relative;
+
+    .logo {
+      filter: invert(1);
+      width: 235px;
+      margin-right: auto;
+    }
+  }
+
+  .hamburger {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .container-active {
+    padding-left: $width-desktop-nav;
+  }
+
+  .menu {
+    width: $width-desktop-nav;
+    top: 0;
+    bottom: 0;
+    left: -$width-desktop-nav;
+  }
+
+  .visible {
+    left: 0;
+  }
+
+  .desktop-hidden {
+    display: none;
+  }
+
+  .navigation-vertical {
+    @for $i from 7 through 9 {
+      li:nth-child(7n + #{$i}) {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @include grid("lg");
+
+  .sub-section-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  @include grid("xl");
+
+  .sub-section-container {
+    width: 60%;
+  }
+}
